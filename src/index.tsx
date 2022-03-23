@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
-import { createServer, Model, Server } from "miragejs";
+import { createServer, Model } from "miragejs";
 
 createServer({
   models: {
