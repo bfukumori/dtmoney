@@ -38,9 +38,9 @@
 
 ## About
 
-💲 dtmoney - é uma planilha para controle de finanças.
+💲 dtmoney - financial app to monitor balance.
 
-Projeto desenvolvido durante a o curso de ReactJS do Ignite da [Rocketseat](https://www.rocketseat.com.br/ignite).
+Project developed during the Ignite ReactJS course from [Rocketseat](https://www.rocketseat.com.br/ignite).
 
 ---
 
