@@ -12,6 +12,12 @@ export const GlobalStyle = createGlobalStyle`
   box-shadow: 0 0 0 2px ${({ theme }) => theme.colors['green-500']};
 }
 
+html {
+  @media (max-width: 390px) {
+   font-size: 87.5%;
+  }
+}
+
 body {
   background-color: ${({ theme }) => theme.colors['gray-800']};
   color: ${({ theme }) => theme.colors['gray-100']};

@@ -25,6 +25,24 @@ export const TransactionsTable = styled.table`
     &:last-child {
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
+
+      @media (max-width: 580px) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (max-width: 860px) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (max-width: 580px) {
+        text-align: right;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
     }
   }
 `

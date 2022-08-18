@@ -11,6 +11,10 @@ export const SummaryContainer = styled.section`
   gap: 2rem;
 
   margin-top: -5rem;
+
+  @media (max-width: 860px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 `
 
 interface SummaryCardProps {
@@ -38,6 +42,14 @@ export const SummaryCard = styled.div<SummaryCardProps>`
   ${({ variant, theme }) =>
     variant === 'green' &&
     css`
-      background-color: ${theme.colors['green-700']}; ;
+      background-color: ${theme.colors['green-700']};
+
+      @media (max-width: 860px) {
+        grid-column: 1/3;
+      }
+
+      @media (max-width: 580px) {
+        grid-column: initial;
+      }
     `}
 `
