@@ -12,8 +12,8 @@ interface Transaction {
   id: number
   description: string
   type: 'income' | 'outcome'
-  price: number
   category: string
+  price: number
   createdAt: string
 }
 
@@ -42,9 +42,8 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const fetchTransactions = useCallback(async (query?: string) => {
     const response = await api.get('/transactions', {
       params: {
-        q: query,
-        _sort: 'createdAt',
-        _order: 'desc',
+        description_contains: query,
+        createdAt_order: 'desc',
       },
     })
 
@@ -62,7 +61,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         createdAt: new Date(),
       })
 
-      setTransactions((state) => [response.data, ...state])
+      setTransactions((state) => [{ ...response.data, price }, ...state])
     },
     [],
   )
